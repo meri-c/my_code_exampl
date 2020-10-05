@@ -1,0 +1,36 @@
+<div class="step-tab col-12" id="equipment" style="display: none">
+  <div class="row mb-4">
+    <h5 class="text-black-50 offset-1 my-3 col-auto">Обладнання</h5>
+    <img src="assets/bootstrap/img/ok.png" *ngIf="isEquipmentValid"
+         class="col-auto align-self-center" height=20px>
+  </div>
+
+  <app-custom-select  [label]="'Тип:'" [selectMap]="selectTypes" (result)="addType($event)" ></app-custom-select>
+
+  <app-custom-select  [label]="'Виробник:'" [selectMap]="selectVendors" (result)="loadModel($event)" ></app-custom-select>
+
+  <app-custom-select  [isDisabled]="selectModels === undefined"
+                     [label]="'Модель:'" [selectMap]="selectModels" (result)="loadSeries($event)" ></app-custom-select>
+
+  <app-custom-select [isDisabled]="selectSeries === undefined"
+                     [label]="'Серія:'" [selectMap]="selectSeries" (result)="addSeries($event)" ></app-custom-select>
+
+
+  <app-custom-field [isValid]="serial_num_isValid" [invalid_msg]="serial_num_invalid_msg" [validator]="'[A-Za-z0-9]{8}'"
+                    [label]="'Серійний номер'" (result)="checkSerialNum($event)"></app-custom-field>
+
+  <app-custom-field [isValid]="inventory_num_isValid" [invalid_msg]="inventory_num_invalid_msg" [validator]="'[A-Za-z0-9]{6,20}'"
+                    [label]="'Інвентарний номер'" (result)="checkInventoryNum($event)" [preset_info]="preset_inventory_num">
+  </app-custom-field>
+
+
+
+  <h5 class="text-black-50 offset-1 my-3">Додаткові параметри</h5>
+
+  <app-custom-field [label]="'Назва'" (result)="addName($event)"></app-custom-field>
+
+  <app-custom-field [isDisabled]="paramName === undefined"
+                    [label]="'Значення'" (result)="addValue($event)"></app-custom-field>
+
+
+</div>

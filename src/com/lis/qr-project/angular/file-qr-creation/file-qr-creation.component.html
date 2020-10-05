@@ -1,0 +1,71 @@
+<div class="tabs row " id="file-qr-creation">
+
+  <div class="big-tab row justify-content-center">
+
+    <!--load file-->
+
+    <h4 class="text-center mb-5 col-12">
+      Завантажте файл з інвентарними номерами
+    </h4>
+
+    <app-file-upload class="col-12" (onFileReady)="onFile($event)"></app-file-upload>
+
+    <button type="button" [disabled]="fileData == undefined" class="btn btn-default mt-4 "
+            (click)="onSubmitFile()"
+    >Завантажити
+    </button>
+  </div>
+
+
+  <div class="big-tab row" style="display: none">
+
+    <app-title-arrow [title]="result_title" (back)="back()"></app-title-arrow>
+
+    <!--result some inventories are not found-->
+    <div class="row justify-content-center">
+      <h5 class="text-center col-12">
+        Не знайдено: {{selectInventoryNums.size}} шт</h5>
+
+      <hr class="col-11 my-3">
+      <h5 class="text-center mb-3 col-12">Оберіть інвентарний номер, та створіть для нього обладнання</h5>
+
+      <app-custom-select class="col-12" [label]="''" [selectMap]="selectInventoryNums"
+                         (result)="getSelectedInventoryNum($event)"></app-custom-select>
+      <button class="btn btn-default" data-toggle="modal" data-target="#modal_content">Створити</button>
+
+      <div class="w-100 my-3"></div>
+
+      <button class="btn btn-blue " (click)="finishAndFormDoc()">Завершити</button>
+
+    </div>
+
+  </div>
+
+  <div class="big-tab row " style="display: none">
+
+    <app-title-arrow [title]="result_title" (back)="back()"></app-title-arrow>
+
+    <div class="row col-12 justify-content-center">
+      <div class="col-auto mt-4">
+        <img src="assets/bootstrap/img/folder.png"
+             class="col-auto  hover" height="60%">
+        <p class="text-center">{{fileName}}
+        </p>
+      </div>
+
+      <div class="w-100"></div>
+
+      <div class="col-auto ">
+        <button type="load" class="btn btn-primary" (click)="downloadQrDoc()">Завантажити
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <app-alert></app-alert>
+
+</div>
+<app-modal-content>
+  <app-equipment-creation></app-equipment-creation>
+</app-modal-content>

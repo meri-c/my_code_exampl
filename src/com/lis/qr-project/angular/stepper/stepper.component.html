@@ -1,0 +1,14 @@
+  <div class="col-12">
+    <div id="nextPrevBtns" class="row justify-content-around my-4">
+      <button type="button" class="btn btn-action" id="prevBtn" [disabled]="currentTab==0" (click)="change(-1)">
+        Previous
+      </button>
+      <button type="button" class="btn btn-action" id="nextBtn" [hidden]="(currentTab+1)>=tabsAmount"
+              (click)="change(1)">Next
+      </button>
+      <button type="button" class="btn btn-action" id="finishBtn" [hidden]="(currentTab+1)!==tabsAmount" (click)="finish()">Finish
+      </button>
+    </div>
+
+    <div class="text-center">Стр {{currentTab + 1}}/{{tabsAmount}}</div>
+  </div>
