@@ -15,17 +15,17 @@ component for creation a docx file from the passed file with inventory numbers.
 If there are inventory numbers without equipment data, there will be a suggestion for user to create missing equipment
 or to skip this step. Finally you get the docx file with all the qr-codes (3 in the each row)
 
-##Filter service
+## Filter service
 A filter near to equipment, users, department handbooks, with dynamic parameters. Allow to reuse it in different places.
 As a result will show list of cards with desired info.
 
-##Http service
+## Http service
 Service with api library and methods for getting, sending and modifying data.
 
 
-##Custom stepper (for step-by-step obj creation)
+## Custom stepper (for step-by-step obj creation)
 
-###Stepper
+### Stepper
 Component with the html stepper view and actions delegation to the service. Placed in the bottom of the page
 gets info about how much tabs and so on.
 
@@ -33,8 +33,10 @@ Has 3 parts
 Main - Stepper
 Basic methods for initing, step forward\back, and finish.
 
-###StepTab - usual stepper. Include all the elements with class 'tab'
-###BigTab - stepper for sub-pages. All elements with class 'big-tab'
+### StepTab  
+usual stepper. Include all the elements with class 'tab'
+### BigTab 
+stepper for sub-pages. All elements with class 'big-tab'
 
 
 

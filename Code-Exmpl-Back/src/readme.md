@@ -1,6 +1,6 @@
-#The backend part of the qr-project app
+# The backend part of the qr-project app
 
-##Layers Structure:
+## Layers Structure:
 
 Basically: CRUD, checking info, inventory pre and post process handling, authorization,
 docs and file converting, qr-image creation.
