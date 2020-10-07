@@ -1,5 +1,3 @@
-## * Since it was the project for PFU, now it belongs to the government
-## * That's why I don't have any legal right to expose full working project
 ## * This repo holds only code PARTS, to show an example of my skills, so it WILL NOT run on your pc.
 
 ------
