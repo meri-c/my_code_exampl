@@ -19,7 +19,7 @@ Since all of the information above keep tracking in the separated systems by dif
 we decided to combine each part of tracking info in one shared app.
 
 ### The realization:
-main.model.Inventory project has all the information about the equipment, users and people, who is responsible for that.
+main.model.Inventory project has all the information about the equipment, users and people, who are responsible for that.
 
 There is a qr-code on each item so every logged in user in app (android, java) can see the information:
 what is it, who is the owner, in which room it should be.
