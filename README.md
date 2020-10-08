@@ -22,7 +22,7 @@ we decided to combine each part of tracking info in one shared app.
 main.model.Inventory project has all the information about the equipment, users and people, who are responsible for that.
 
 There is a qr-code on each item so every logged in user in app (android, java) can see the information:
-what is it, who is the owner, in which room it should be.
+what is it, who is the owner, in which room should it be.
 
 In the same app you can mark an item transferring or the owner changing.
 You can run an inventory check, in a format "what should be here, what did we find, report about missing elements".
@@ -32,12 +32,12 @@ department.
 
 #### The frontend part (angular, material bootstrap) is 
 for admins to fill the db, check stored items, see any equipment transferring,
- it's history.
+ its history.
 To create equipment data and generate qr-code(s) for printing. To control workers and users data.
 
 #### The backend part (java, spring-boot, mybatis, mysql) is
  storing in db, api handling, managing and converting data,
-creates documents.
+creating documents.
 
 ##### All of CI/CD scripts (bitbucket) and the part of a devops work(jenkins, docker, linux server setup) unfortunately can not be shown here.
 
