@@ -39,7 +39,7 @@ To create equipment data and generate qr-code(s) for printing. To control worker
  storing in db, api handling, managing and converting data,
 creates documents.
 
-##### All of CI/CD scripts (bitbacket) and the part of a devops work(jenkins, docker, linux server setup) unfortunately can not be shown here.
+##### All of CI/CD scripts (bitbucket) and the part of a devops work(jenkins, docker, linux server setup) unfortunately can not be shown here.
 
 
 ## All the additional info about the project parts you can read inside the modules. 
