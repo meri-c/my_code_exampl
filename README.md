@@ -1,4 +1,4 @@
-## * This repo holds only code PARTS, to show an example of my skills, so it WILL NOT run on your pc.
+fi## * This repo holds only code PARTS, to show an example of my skills, so it WILL NOT run on your pc.
 
 ------
 
